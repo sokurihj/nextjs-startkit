@@ -1,6 +1,6 @@
 # React Hook Form + Zod + Server Actions 완전 가이드
 
-이 문서는 Next.js 15.5.3에서 React Hook Form + Zod + Server Actions를 활용한 최적의 폼 처리 패턴을 제공합니다.
+이 문서는 Next.js 16.2.6에서 React Hook Form + Zod + Server Actions를 활용한 최적의 폼 처리 패턴을 제공합니다.
 
 ## 🚀 기본 설정 및 셋업
 
@@ -14,9 +14,9 @@ npm install react-hook-form @hookform/resolvers zod
 npm install use-debounce react-error-boundary
 
 # 기존 프로젝트에 설치된 관련 패키지들
-# - react-hook-form: ^7.63.0
-# - @hookform/resolvers: ^5.2.2
-# - zod: ^4.1.11
+# - react-hook-form: ^7.76.1
+# - @hookform/resolvers: ^5.4.0
+# - zod: ^4.4.3
 ```
 
 ### TypeScript 설정 최적화

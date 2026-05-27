@@ -1,31 +1,30 @@
 # 프로젝트 구조 가이드
 
-이 문서는 Next.js 15.5.3 프로젝트의 폴더 구조, 파일 조직 및 네이밍 컨벤션을 정의합니다.
+이 문서는 Next.js 16.2.6 프로젝트의 폴더 구조, 파일 조직 및 네이밍 컨벤션을 정의합니다.
 
 ## 🏗️ 전체 프로젝트 구조
 
 ```
-claude-nextjs-starters/
-├── docs/                   # 📚 프로젝트 문서
-│   └── guides/            # 개발 가이드 모음
-├── public/                # 🌍 정적 파일 (이미지, 아이콘)
-├── src/                   # 📦 소스 코드 루트
-│   ├── app/              # 🚀 Next.js App Router
-│   ├── components/       # 🧩 React 컴포넌트
-│   └── lib/              # 🛠️ 유틸리티 및 설정
+nextjs-startkit/
+├── app/                  # 🚀 Next.js App Router
+├── components/           # 🧩 React 컴포넌트
+├── docs/                 # 📚 프로젝트 문서
+│   └── guides/           # 개발 가이드 모음
+├── lib/                  # 🛠️ 유틸리티 및 설정
+├── public/               # 🌍 정적 파일 (이미지, 아이콘)
 ├── components.json       # shadcn/ui 설정
 ├── next.config.ts        # Next.js 설정
 ├── package.json          # 의존성 및 스크립트
 ├── tsconfig.json         # TypeScript 설정
-└── CLAUDE.md            # 개발 지침 메인 문서
+└── CLAUDE.md             # 개발 지침 메인 문서
 ```
 
 ## 📁 세부 폴더 구조
 
-### src/app/ - App Router 페이지
+### app/ - App Router 페이지
 
 ```
-src/app/
+app/
 ├── layout.tsx           # 🎨 루트 레이아웃 (전역 설정)
 ├── page.tsx            # 🏠 홈페이지 (/)
 ├── globals.css         # 🎨 전역 CSS 스타일
@@ -43,10 +42,10 @@ src/app/
 - `error.tsx`: 에러 UI (필요시)
 - `not-found.tsx`: 404 페이지 (필요시)
 
-### src/components/ - 컴포넌트 조직
+### components/ - 컴포넌트 조직
 
 ```
-src/components/
+components/
 ├── ui/                 # 🎛️ 기본 UI 컴포넌트 (shadcn/ui)
 │   ├── button.tsx     # 버튼
 │   ├── card.tsx       # 카드
@@ -98,17 +97,17 @@ src/components/
    - 테마 관리
    - 인증 상태
 
-### src/lib/ - 유틸리티 및 설정
+### lib/ - 유틸리티 및 설정
 
 ```
-src/lib/
+lib/
 ├── utils.ts           # 🛠️ 공통 유틸리티 함수
 └── env.ts             # 🔧 환경변수 검증
 ```
 
 **📚 lib/ 폴더 확장 가이드:**
 ```
-src/lib/
+lib/
 ├── utils.ts           # 공통 유틸리티
 ├── env.ts             # 환경변수 검증
 ├── constants.ts       # 상수 정의
@@ -183,11 +182,11 @@ import { cn } from '../../lib/utils'
 ```
 
 **📍 정의된 별칭:**
-- `@/components` → `src/components`
-- `@/lib` → `src/lib`
-- `@/hooks` → `src/hooks`
-- `@/ui` → `src/components/ui`
-- `@/utils` → `src/lib/utils`
+- `@/components` → `components`
+- `@/lib` → `lib`
+- `@/hooks` → `hooks`
+- `@/ui` → `components/ui`
+- `@/utils` → `lib/utils`
 
 ## 📝 새 파일/폴더 추가 규칙
 
